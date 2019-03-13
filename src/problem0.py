@@ -265,12 +265,12 @@ def problem0b(n):
            between 2 and 13.
       -- If n is 2, this function returns 1,
            since there is one prime (namely, 2) between 2 and 2.
-      -- If n is 200, the correct answer is 46,
-           since there are 46 primes between 2 and 200.
-     """
-    # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
-    #          Tests have been written for you (above).
+    #       -- If n is 200, the correct answer is 46,
+    #            since there are 46 primes between 2 and 200.
+    #      """
+    #     # -------------------------------------------------------------------------
+    #     # DONE: 4. Implement and test this function.
+    #     #          Tests have been written for you (above).
     #
     ###########################################################################
     # IMPORTANT:
@@ -343,7 +343,7 @@ def problem0c(circle, n, window):
       :type window: rg.RoseWindow
     """
     # -------------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #          Tests have been written for you (above).
     #
     ###########################################################################
