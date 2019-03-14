@@ -157,7 +157,7 @@ def run_test_problem1a():
     print('       actual:  ', actual)
 
     # Test 3:
-    expected = 0
+    expected = -0.756
     actual = problem1a(2,2)
     print('Test 3 expected:', expected)
     print('       actual:  ', actual)
@@ -190,7 +190,10 @@ def run_test_problem1a():
 
 def problem1a(m,n):
     print(m,n,n**2 - m**2)
-    for k in range(n**2 - m**2)
+    total = 0
+    for k in range((n**2 - m**2)+1):
+        total = total + math.sin((m**2)+k)
+    return total
 
 # def problem1a(n,m):
 #     print(n,m,abs(m ** 2 - n ** 2)) #testing range statement
