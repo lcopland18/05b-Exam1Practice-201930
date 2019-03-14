@@ -157,7 +157,7 @@ def run_test_problem1a():
     print('       actual:  ', actual)
 
     # Test 3:
-    expected = -0.7568
+    expected = 0
     actual = problem1a(2,2)
     print('Test 3 expected:', expected)
     print('       actual:  ', actual)
@@ -188,15 +188,19 @@ def run_test_problem1a():
     #    TIME ESTIMATE:   10 minutes.
     # -------------------------------------------------------------------------
 
-def problem1a(n,m):
-    print(n,m,abs(m ** 2 - n ** 2)) #testing range statement
+def problem1a(m,n):
+    print(m,n,n**2 - m**2)
+    for k in range(n**2 - m**2)
 
-    total = 0
-    for k in range((m**2 - n**2)+1):
-        print(n+k)
-        total = total + math.sin(n+k)
-
-    return total
+# def problem1a(n,m):
+#     print(n,m,abs(m ** 2 - n ** 2)) #testing range statement
+#
+#     total = 0
+#     for k in range((m**2 - n**2)+1):
+#         print(n+k)
+#         total = total + math.sin(n+k)
+#
+#     return total
 #    total = 0
 #    for k in range((m^2) - (n^2)):
 #        print(k,(n^2)-(m^2),total)
