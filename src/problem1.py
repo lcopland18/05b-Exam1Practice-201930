@@ -3,8 +3,8 @@ PRACTICE Exam 1, problem 1.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Lauren Copland.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 # Students:
@@ -28,6 +28,7 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 
 import testing_helper
 import time
+import math
 
 
 def main():
@@ -38,7 +39,7 @@ def main():
 
 
 ###############################################################################
-# TODO: 2.  READ the green doc-string for the:
+# DONE: 2.  READ the green doc-string for the:
 #   - is_prime
 #   - sum_of_digits
 # functions defined below.  You do NOT need to understand their
@@ -149,8 +150,18 @@ def run_test_problem1a():
     #   print('       actual:  ', actual)
     # -------------------------------------------------------------------------
 
+    #Test 2:
+    expected = 1.135
+    actual = problem1a(1,2)
+    print('Test 2 expected:', expected)
+    print('       actual:  ', actual)
 
-def problem1a(m, n):
+    # Test 3:
+    expected = -0.7568
+    actual = problem1a(2,2)
+    print('Test 3 expected:', expected)
+    print('       actual:  ', actual)
+
     """
     What comes in:  Integers m and n with abs(m) <= abs(n).
     What goes out:
@@ -176,6 +187,25 @@ def problem1a(m, n):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   10 minutes.
     # -------------------------------------------------------------------------
+
+def problem1a(n,m):
+    print(n,m,abs(m ** 2 - n ** 2)) #testing range statement
+
+    total = 0
+    for k in range((m**2 - n**2)+1):
+        print(n+k)
+        total = total + math.sin(n+k)
+
+    return total
+#    total = 0
+#    for k in range((m^2) - (n^2)):
+#        print(k,(n^2)-(m^2),total)
+#        total = total + math.sin(n^2+k)
+
+#    return total
+
+
+
 
 
 def run_test_problem1b():
