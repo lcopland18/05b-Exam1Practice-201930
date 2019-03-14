@@ -218,7 +218,7 @@ def problem1a(m,n):
 def run_test_problem1b():
     """ Tests the   problem1b   function. """
     # -------------------------------------------------------------------------
-    # TODO: 5. Implement this TEST function.
+    # done: 5. Implement this TEST function.
     #   It TESTS the  problem1b  function defined below.
     #   Include at least **   4   ** tests.  Use the usual form:
     #
@@ -286,6 +286,13 @@ def problem1b(m, f):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   10 to 15 minutes.
     # -------------------------------------------------------------------------
+
+    count = 0
+    for k in range(((m*f)-m)+1):
+        if is_prime(m+k):
+            count = count + 1
+
+    return count
 
 
 def run_test_problem1c():
