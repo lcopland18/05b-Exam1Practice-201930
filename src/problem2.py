@@ -117,7 +117,8 @@ def problem2a(circle, rectangle, window):
     rectangle.attach_to(window)
     window.render()
 
-    line =rg.Line(rg.Point(rectangle.corner_1.x,rectangle.corner_1.y),rg.Point(rectangle.corner_2.x,rectangle.corner_2.y))
+    line = rg.Line(rg.Point(rectangle.corner_1.x,rectangle.corner_1.y),rg.Point(rectangle.corner_2.x,rectangle.corner_2.y))
+
 
 def run_test_problem2b():
     """ Tests the  problem2b   function. """
