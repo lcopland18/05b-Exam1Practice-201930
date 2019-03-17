@@ -171,10 +171,11 @@ def problem3a(window, point, n):
 
         if line2.thickness > 13:
             line2.thickness = 13
-            thickness_total = line2.thickness + 2
 
         line2.attach_to(window)
         window.render()
+
+        thickness_total = thickness_total + line2.thickness
 
     return thickness_total
 
