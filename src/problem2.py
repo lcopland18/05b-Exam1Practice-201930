@@ -196,14 +196,16 @@ def problem2b(rect, n, delta, win):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   15 to 25 minutes.
     # -------------------------------------------------------------------------
-    width = abs(rect.corner_2().x,rectcorner_1().x)
-    length = abs(rect.corner_2.y - rect.corner_1().y)
+    width = abs(rect.corner_2.x - rect.corner_1.x)
+    length = abs(rect.corner_2.y - rect.corner_1.y)
 
-    rect.attach_to(win)
+     rect.attach_to(win)
     win.render()
 
     for k in range(n):
-       rectangle = rg.rectangle()
+        rectangle = rg.Rectangle(rg.Point(rect.get_center().x+(width/2)+k*(delta/2),rect.get_center().y+(length/2)+k*(delta/2)),rg.Point(rect.get_center().x-(width/2)-k*(delta/2),rect.get_center().y-(length/2)-k*(delta/2)))
+        rectangle.attach_to(win)
+        win.render()
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
