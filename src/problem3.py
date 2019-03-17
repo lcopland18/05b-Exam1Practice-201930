@@ -253,14 +253,17 @@ def problem3b(m, point1):
     # -------------------------------------------------------------------------
 
     window = rg.RoseWindow(400,650)
+    total_thickness = 0
 
     for k in range(m):
-        problem3a(window,rg.Point(point1.x,point1.y+(k*60)),3+(k*2))
+        thickness = problem3a(window,rg.Point(point1.x,point1.y+(k*60)),3+(k*2))
+        total_thickness = total_thickness + thickness
 
 
     window.render()
     window.close_on_mouse_click()
 
+    return total_thickness
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # -----------------------------------------------------------------------------
