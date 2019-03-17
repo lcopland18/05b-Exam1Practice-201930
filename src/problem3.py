@@ -162,12 +162,27 @@ def problem3a(window, point, n):
     line = rg.Line(point,rg.Point(point.x,point.y+50))
     line.attach_to(window)
     window.render()
+    thickness_total = 1
+
 
     for k in range(n-1):
         line2 = rg.Line(rg.Point(line.start.x +((k+1)*20),line.start.y+(k+1)*10),rg.Point(line.start.x+((k+1)*20),line.start.y+(((k+1)*10)+50)))
+        old_thickness = line2.thickness
+
+        if line2.thickness < 13:
+            line2.thickness = line2.thickness + (k+1)*2
+            thickness_total = line2.thickness + (k+1)*2
+            print(k,line2.thickness)
+
+        else:
+            line2.thickness = 13
+            thickness_total = line2.thickness + (k+1)*2
+
         line2.attach_to(window)
         window.render()
 
+
+        #return thickness_total
 
 
 def run_test_problem3b():
