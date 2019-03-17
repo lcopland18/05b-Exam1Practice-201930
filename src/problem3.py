@@ -38,7 +38,7 @@ def main():
 def run_test_problem3a():
     """ Tests the   problem3a   function. """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function.
+    # DONE: 2. Implement this TEST function.
     #   It TESTS the  problem1a  function defined below.
     #   Include at least **   5   ** tests (we wrote four for you).
     # -------------------------------------------------------------------------
@@ -159,6 +159,17 @@ def problem3a(window, point, n):
     # -------------------------------------------------------------------------
 
 
+    line = rg.Line(point,rg.Point(point.x,point.y+50))
+    line.attach_to(window)
+    window.render()
+
+    for k in range(n-1):
+        line2 = rg.Line(rg.Point(line.start.x +((k+1)*20),line.start.y+(k+1)*10),rg.Point(line.start.x+((k+1)*20),line.start.y+(((k+1)*10)+50)))
+        line2.attach_to(window)
+        window.render()
+
+
+
 def run_test_problem3b():
     """ Tests the   problem3b   function. """
     # Test 1 is ALREADY DONE (here).
@@ -226,6 +237,7 @@ def problem3b(m, point1):
     #    DIFFICULTY:      8 or 9
     #    TIME ESTIMATE:   20 to 30 minutes.
     # -------------------------------------------------------------------------
+
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
