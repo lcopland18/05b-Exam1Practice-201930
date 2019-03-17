@@ -103,7 +103,7 @@ def problem2a(circle, rectangle, window):
       :type window:    rg.RoseWindow
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
     # -------------------------------------------------------------------------
@@ -112,12 +112,18 @@ def problem2a(circle, rectangle, window):
     #    TIME ESTIMATE:   10 to 15 minutes.
     # -------------------------------------------------------------------------
 
-
     circle.attach_to(window)
     rectangle.attach_to(window)
     window.render()
 
-    line = rg.Line(rg.Point(rectangle.corner_1.x,rectangle.corner_1.y),rg.Point(rectangle.corner_2.x,rectangle.corner_2.y))
+    window.continue_on_mouse_click()
+    line = rg.Line(rg.Point(rectangle.get_upper_right_corner().x,rectangle.get_upper_right_corner().y),rg.Point(rectangle.get_lower_left_corner().x,rectangle.get_lower_left_corner().y))
+    line.attach_to(window)
+    window.render()
+    window.continue_on_mouse_click()
+
+    circle.fill_color = rectangle.outline_color
+    window.render()
 
 
 def run_test_problem2b():
