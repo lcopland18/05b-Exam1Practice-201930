@@ -116,6 +116,10 @@ def run_test_problem3a():
     print('Test 5 expected:', expected)
     print('       actual:  ', answer)
 
+    window4.close_on_mouse_click()
+
+
+
 def problem3a(window, point, n):
     """
     See   problem3a_picture.pdf   in this project for pictures
