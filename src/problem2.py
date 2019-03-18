@@ -118,6 +118,8 @@ def problem2a(circle, rectangle, window):
 
     window.continue_on_mouse_click()
     line = rg.Line(rg.Point(rectangle.get_upper_right_corner().x,rectangle.get_upper_right_corner().y),rg.Point(rectangle.get_lower_left_corner().x,rectangle.get_lower_left_corner().y))
+    #line.arrow = 'end'
+
     line.attach_to(window)
     window.render()
     window.continue_on_mouse_click()
@@ -199,7 +201,7 @@ def problem2b(rect, n, delta, win):
     width = abs(rect.corner_2.x - rect.corner_1.x)
     length = abs(rect.corner_2.y - rect.corner_1.y)
 
-     rect.attach_to(win)
+    rect.attach_to(win)
     win.render()
 
     for k in range(n):
